@@ -1,7 +1,4 @@
-import { useQuestion } from "../contextpovider/questionprovider";
-
-function NextQuestion() {
-  const { dispatch, answer, index, numQuestions } = useQuestion();
+function NextQuestion({ dispatch, answer, index, numQuestions }) {
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (

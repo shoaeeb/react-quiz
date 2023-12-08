@@ -1,7 +1,4 @@
-import { useQuestion } from "../contextpovider/questionprovider";
-
-function FinishedScreen() {
-  const { highestScore, maxPoints, points, dispatch } = useQuestion();
+function FinishedScreen({ highestScore, index, maxPoints, points, dispatch }) {
   const percentage = (points / maxPoints) * 100;
   let emoji;
   if (percentage === 100) emoji = "🎖️";

@@ -1,7 +1,4 @@
-import { useQuestion } from "../contextpovider/questionprovider";
-
-function Progress() {
-  const { index, numQuestions, points, answer, maxPoints } = useQuestion();
+function Progress({ index, numQuestions, points, answer, maxPoints }) {
   return (
     <header className="progress">
       <progress max={numQuestions} value={index + Number(answer !== null)} />

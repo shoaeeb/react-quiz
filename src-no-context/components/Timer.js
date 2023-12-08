@@ -1,8 +1,6 @@
 import { useEffect } from "react";
-import { useQuestion } from "../contextpovider/questionprovider";
 
-function Timer() {
-  const { dispatch, secondsRemaining } = useQuestion();
+function Timer({ dispatch, secondsRemaining }) {
   const minutes = Math.trunc(secondsRemaining / 60);
   const seconds = Math.trunc(secondsRemaining % 60);
   useEffect(

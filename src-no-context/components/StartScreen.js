@@ -1,7 +1,4 @@
-import { useQuestion } from "../contextpovider/questionprovider";
-
-function StartScreen() {
-  const { numQuestions, dispatch } = useQuestion();
+function StartScreen({ numQuestions, dispatch }) {
   return (
     <div className="start">
       <h2>Welcome To React Quiz</h2>
